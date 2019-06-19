@@ -9,7 +9,8 @@ El proyecto está dividido en varios ejemplos:
 En este ejemplo se utiliza un simple proyecto springboot con maven que utiliza el conector Java JDBC de InterSystems IRIS para conectarse a una instancia de IRIS Community Edition que se levanta en un contenedor Docker.
 
 El controlador JDBC reside en un directorio de la instancia de IRIS y se debe traer al equipo local:
-´´´
+
+```bash
 root@localhost:/# df
 Filesystem     1K-blocks      Used Available Use% Mounted on
 overlay         61255492  35660284  22453884  62% /
@@ -33,11 +34,11 @@ Configuration 'IRIS'   (default)
         product:      InterSystems IRIS
 
 root@localhost:/shared# cp /usr/irissys/dev/java/lib/JDK18/intersystems-jdbc-3.0.0.jar /shared/
-´´´
+```
 
 Posteriormente se debe registrar la librería para que pueda ser referenciada por Maven:
 
-´´´
+```bash
 mv intersystems-jdbc-3.0.0.jar ../drivers
 mvn install:install-file -Dfile="drivers/intersystems-jdbc-3.0.0.jar" -DgroupId="com.intersystems.jdbc" -DartifactId="IRISDriver" -Dversion="3.0.0" -Dpackaging=jar
-´´´
+```
