@@ -1,0 +1,17 @@
+com\webinar\Application.class
+org\hibernate\dialect\InterSystemsIRISDialect$2.class
+com\webinar\repository\ActorRepository.class
+org\hibernate\exception\internal\InterSystemsIRISSQLExceptionConversionDelegate.class
+org\hibernate\dialect\InterSystemsIRISDialect.class
+com\webinar\repository\DirectorRepository.class
+com\webinar\controller\CarteleraController.class
+com\webinar\repository\PeliculaRepository.class
+org\hibernate\dialect\InterSystemsIRISDialect$1.class
+org\hibernate\dialect\identity\InterSystemsIRISIdentityColumnSupport.class
+org\hibernate\sql\InterSystemsIRISJoinFragment.class
+com\webinar\persistence\Actor.class
+com\webinar\persistence\Pelicula.class
+com\webinar\service\PeliculaService.class
+org\hibernate\dialect\InterSystemsIRISDialect$3.class
+com\webinar\persistence\Director.class
+com\webinar\persistence\Persona.class
