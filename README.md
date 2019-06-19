@@ -42,3 +42,7 @@ Posteriormente se debe registrar la librería para que pueda ser referenciada po
 mv intersystems-jdbc-3.0.0.jar ../drivers
 mvn install:install-file -Dfile="drivers/intersystems-jdbc-3.0.0.jar" -DgroupId="com.intersystems.jdbc" -DartifactId="IRISDriver" -Dversion="3.0.0" -Dpackaging=jar
 ```
+
+## jdbc-jpa-rest
+
+En este ejemplo se utiliza igualmente Spring Boot y Maven. En este caso se utiliza Hybernate JPA para vincular las tablas a entidades
