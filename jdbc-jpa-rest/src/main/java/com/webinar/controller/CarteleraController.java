@@ -9,7 +9,7 @@ import com.webinar.service.PeliculaService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -21,13 +21,13 @@ public class CarteleraController {
     @Autowired
     private ActorService actorService;
 
-    @RequestMapping("/peliculas")
+    @GetMapping("/peliculas")
     public List<Pelicula> muestraPeliculas() {
 
         return peliculaService.recuperaPeliculas();
     }
 
-    @RequestMapping("/actores")
+    @GetMapping("/actores")
     public List<Actor> muestraActores() {
 
         return actorService.recuperaActores();

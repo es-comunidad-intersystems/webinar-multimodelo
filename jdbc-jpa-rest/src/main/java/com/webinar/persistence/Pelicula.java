@@ -6,6 +6,9 @@ import java.util.Set;
 
 import javax.persistence.*;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 @Entity
 @Table(name = "pelicula")
 public class Pelicula {
@@ -22,11 +25,13 @@ public class Pelicula {
     private LocalDate fecha;
 
     @JoinTable(name = "actor_pelicula", joinColumns = @JoinColumn(name = "pelicula", referencedColumnName = "id"), inverseJoinColumns = @JoinColumn(name = "persona", nullable = false, referencedColumnName = "id"))
-    @ManyToMany(cascade = CascadeType.ALL)
+    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JsonManagedReference
     private Set<Actor> actores = new HashSet<Actor>();
 
-    @ManyToOne(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
+    @ManyToOne(cascade = CascadeType.PERSIST, fetch = FetchType.LAZY)
     @JoinColumn(name = "director")
+    @JsonBackReference
     private Director director;
 
     public Pelicula() {

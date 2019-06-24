@@ -46,9 +46,9 @@ public class Application implements CommandLineRunner {
                 actores.add(actor2);
                 System.out.println("actor 3");
                 Actor actor3 = new Actor();
-                actor2.setApellido1("Gunton");
-                actor2.setNombre("Bob");
-                actor2.setFechaNacimiento(LocalDate.of(1945, 11, 15));
+                actor3.setApellido1("Gunton");
+                actor3.setNombre("Bob");
+                actor3.setFechaNacimiento(LocalDate.of(1945, 11, 15));
                 actores.add(actor3);
                 System.out.println("director 1");
                 Director director1 = new Director();

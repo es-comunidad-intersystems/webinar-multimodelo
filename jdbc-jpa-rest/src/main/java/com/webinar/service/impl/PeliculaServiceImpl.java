@@ -3,9 +3,7 @@ package com.webinar.service.impl;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.webinar.persistence.Actor;
 import com.webinar.persistence.Pelicula;
-import com.webinar.repository.ActorRepository;
 import com.webinar.repository.PeliculaRepository;
 import com.webinar.service.PeliculaService;
 
