@@ -1,0 +1,11 @@
+version: '3.6'
+services:
+  iris:
+    hostname: localhost
+    image: store/intersystems/iris:2019.2.0.107.0-community
+    container_name: iris_webminar
+    volumes:
+      - ${PWD}/shared/:/shared
+    ports:
+      - 9091:51773
+      - 9092:52773
