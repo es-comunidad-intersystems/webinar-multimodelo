@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # WebinarWeb
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.5.
@@ -157,4 +156,4 @@ Borrar un objeto existente
 ```bash
 curl -X DELETE http://localhost:8000/api/test/1
 ```
->>>>>>> origin/master
+
