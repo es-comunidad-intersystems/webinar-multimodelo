@@ -6,7 +6,11 @@
 /out-tsc
 
 # dependencies
+<<<<<<< HEAD
 /node_modules
+=======
+/node-express-rest/node_modules
+>>>>>>> origin/master
 
 # IDEs and editors
 /.idea
@@ -30,6 +34,7 @@
 /coverage
 /libpeerconnection.log
 npm-debug.log
+<<<<<<< HEAD
 yarn-error.log
 testem.log
 /typings
@@ -37,3 +42,19 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+=======
+testem.log
+/typings
+
+# e2e
+/e2e/*.js
+/e2e/*.map
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# node-persist
+/.node-persist
+jdbc-jpa-rest/target/
+>>>>>>> origin/master
