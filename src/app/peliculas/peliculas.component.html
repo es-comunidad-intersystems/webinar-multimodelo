@@ -1,0 +1,38 @@
+<div class="row">
+  <table class="table" *ngIf="peliculas">
+    <thead>
+      <tr>
+        <th scope="col">
+          Titulo
+        </th>
+        <th scope="col">
+          Fecha
+        </th>
+        <th scope="col">
+          Director
+        </th>
+        <th scope="col">
+          Actores
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let pelicula of peliculas">
+        <td>
+          {{pelicula.titulo}}
+        </td>
+        <td>
+          {{pelicula.fecha}}
+        </td>
+        <td>
+          {{pelicula.director.nombre}} {{pelicula.director.apellido1}}
+        </td>
+        <td>
+          <span *ngFor="let actor of pelicula.actores">
+            {{actor.nombre}} {{actor.apellido1}}<br />
+          </span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
