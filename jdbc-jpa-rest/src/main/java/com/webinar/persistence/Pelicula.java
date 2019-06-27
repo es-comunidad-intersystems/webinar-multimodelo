@@ -25,13 +25,13 @@ public class Pelicula {
     private LocalDate fecha;
 
     @JoinTable(name = "actor_pelicula", joinColumns = @JoinColumn(name = "pelicula", referencedColumnName = "id"), inverseJoinColumns = @JoinColumn(name = "persona", nullable = false, referencedColumnName = "id"))
-    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @ManyToMany(cascade = CascadeType.DETACH, fetch = FetchType.EAGER)
     @JsonManagedReference
     private Set<Actor> actores = new HashSet<Actor>();
 
-    @ManyToOne(cascade = CascadeType.PERSIST, fetch = FetchType.LAZY)
+    @ManyToOne(cascade = CascadeType.DETACH, fetch = FetchType.EAGER)
     @JoinColumn(name = "director")
-    @JsonBackReference
+    @JsonManagedReference
     private Director director;
 
     public Pelicula() {

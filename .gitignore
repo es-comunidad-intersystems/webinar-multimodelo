@@ -43,3 +43,4 @@ Thumbs.db
 
 # node-persist
 /.node-persist
+jdbc-jpa-rest/target/
