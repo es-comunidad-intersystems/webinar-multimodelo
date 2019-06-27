@@ -1,0 +1,67 @@
+:host {
+background: #343a40;
+}
+
+#sidebar {
+min-width: 200px;
+max-width: 200px;
+height: 92vh;
+color: #fff;
+transition: all 0.3s;
+font-weight: 300;
+font-size: 1.5rem;
+line-height: 1.5;
+float: left;
+}
+
+#sidebar.hidden {
+  margin-left: -200px;
+}
+
+a[data-toggle="collapse"] {
+  position: relative;
+}
+
+@media (max-width: 575px) {
+  #sidebar {
+      margin-left: -200px;
+  }
+  #sidebar.hidden {
+      margin-left: 0;
+  }
+}
+
+a, a:hover, a:focus {
+  color: inherit;
+}
+
+#sidebar .sidebar-header {
+  padding: 20px;
+}
+
+#sidebar ul li a {
+padding: 15px;
+display: block;
+width: 100%;
+}
+
+#sidebar ul li a :hover{
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+hr {
+border-top: 1px solid #fff;
+margin-top: 0;
+}
+
+#sidebar-border {
+min-width: 20px;
+max-width: 20px;
+height: 92vh;
+background-color: #00A89E;
+transition: all 0.3s;
+font-weight: 300;
+font-size: 1.5rem;
+line-height: 1.5;
+float: left;
+}

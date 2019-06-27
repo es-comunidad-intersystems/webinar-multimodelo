@@ -1,0 +1,30 @@
+<div class="row">
+  <table class="table" *ngIf="directores">
+    <thead>
+      <tr>
+        <th scope="col">
+          Nombre
+        </th>
+        <th scope="col">
+          Apellido
+        </th>
+        <th scope="col">
+          Fecha de nacimiento
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let director of directores">
+        <td>
+          {{director.nombre}}
+        </td>
+        <td>
+          {{director.apellido1}}
+        </td>
+        <td>
+          {{director.fechaNacimiento}}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
