@@ -1,6 +1,6 @@
-## jdbc-springboot-maven
+## jdbc-jpa-rest
 
-En este ejemplo se utiliza un simple proyecto SpringBoot con Maven que utiliza el conector Java JDBC de InterSystems IRIS para conectarse a una instancia de IRIS Community Edition que se levanta en un contenedor Docker.
+En este ejemplo se utiliza un proyecto SpringBoot con Maven que utiliza el conector Java JDBC de InterSystems IRIS para conectarse a una instancia de IRIS Community Edition que se levanta en un contenedor Docker. A su vez esta aplicación publicará 3 servicios REST publicos a los que podremos acceder una vez desplegada la aplicación.
 
 ## Configuración básica del entorno
 
@@ -53,11 +53,20 @@ Consultaremos en el archivo application.properties los datos de conexion a nuest
 
 ## Arranque de la aplicación
 
-Una vez descargado y configurado el código en nuestro PC únicamente tendremos que acceder a la ruta del mismo y ejecutar:
+Una vez descargado el código en nuestro PC únicamente tendremos que acceder a la ruta del mismo y ejecutar:
 
 ```
 mvn clean install
 mvn spring-boot:run
 ```
 
-Esto desplegará nuestra aplicación (Spring Boot cuenta con, podremos acceder a el portal de [IRIS](http://localhost:9092/csp/sys/UtilHome.csp) y comprobar como se ha generado la tabla que hemos definido.
+Esto desplegará nuestra aplicación, podremos acceder a el portal de [IRIS](http://localhost:9092/csp/sys/UtilHome.csp) y comprobar como se han generado la tablas y los datos que hemos definido en el archivo Applicacion.java en nuestro código.
+
+Con la aplicación desplegada tendremos acceso a 3 servicios web:
+
+	[Peliculas](http://localhost:8080/peliculas) : Listado de películas registradas en el sistema, con su director y sus actores.
+	[Actores](http://localhost:8080/actores) : Listado de actores en el sistema.
+	[Directores](http://localhost:8080/directores) : Listado de directores en el sistema.
+	
+Con estos servicios web publicados posteriormente podremos acceder desde cualquier aplicación web externa.
+
