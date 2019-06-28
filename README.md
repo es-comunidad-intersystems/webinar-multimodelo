@@ -16,11 +16,11 @@ En este ejemplo se utiliza igualmente Spring Boot y Maven. En este caso se utili
 
 Más detalle en el [README](https://github.com/es-comunidad-intersystems/webinar-multimodelo/tree/master/jdbc-jpa-rest) del proyecto
 
-## webminar-web
+## webinar-web
 
 Aplicación Angular de ejemplo que utiliza la API desarrollada en el ejemplo anterior
 
-Más detalle en el [README](https://github.com/es-comunidad-intersystems/webinar-multimodelo/tree/master/webminar-web) del proyecto
+Más detalle en el [README](https://github.com/es-comunidad-intersystems/webinar-multimodelo/tree/master/webinar-web) del proyecto
 
 ## node-express-rest
 
