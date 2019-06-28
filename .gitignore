@@ -58,3 +58,4 @@ Thumbs.db
 /.node-persist
 jdbc-jpa-rest/target/
 >>>>>>> origin/master
+.DS_Store

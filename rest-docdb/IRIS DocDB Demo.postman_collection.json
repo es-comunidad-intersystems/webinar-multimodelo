@@ -1,0 +1,632 @@
+{
+	"info": {
+		"_postman_id": "d480404e-ee77-45e6-8941-737307c60b5d",
+		"name": "IRIS DocDB Demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Databases",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "SYS",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "superuser",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:57774/api/docdb/v1/DEMO",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "57774",
+					"path": [
+						"api",
+						"docdb",
+						"v1",
+						"DEMO"
+					]
+				},
+				"description": "Gets All Databases"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Person Database",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "SYS",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "superuser",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:57774/api/docdb/v1/DEMO/db/Person",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "57774",
+					"path": [
+						"api",
+						"docdb",
+						"v1",
+						"DEMO",
+						"db",
+						"Person"
+					]
+				},
+				"description": "Create Person Document Database"
+			},
+			"response": []
+		},
+		{
+			"name": "Details of Person Database",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "SYS",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "superuser",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:57774/api/docdb/v1/DEMO/db/Person",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "57774",
+					"path": [
+						"api",
+						"docdb",
+						"v1",
+						"DEMO",
+						"db",
+						"Person"
+					]
+				},
+				"description": "Get Person Document Database"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Properties",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "superuser",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:9092/api/docdb/v1/USER/prop/Prueba/nombre?type=%String&path=Nombre&unique=0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9092",
+					"path": [
+						"api",
+						"docdb",
+						"v1",
+						"USER",
+						"prop",
+						"Prueba",
+						"nombre"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "%String"
+						},
+						{
+							"key": "path",
+							"value": "Nombre"
+						},
+						{
+							"key": "unique",
+							"value": "0"
+						},
+						{
+							"key": "propertyName",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add new Document to Person Database",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "superuser",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Nombre\":\"Alberto\",\n\t\"Apellido\":\"Pérez\",\n\t\"Dirección\": {\n\t\t\"Calle\":\"Principal\",\n\t\t\"Número\":\"1\",\n\t\t\"Ciudad\":\"Madrid\",\n\t\t\"Provincia\":\"Madrid\",\n\t\t\"País\":\"España\"\n\t}\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9092/api/docdb/v1/USER/doc/Prueba/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9092",
+					"path": [
+						"api",
+						"docdb",
+						"v1",
+						"USER",
+						"doc",
+						"Prueba",
+						""
+					]
+				},
+				"description": "Create New Person Document"
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve Document 1 of Person Database",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "superuser",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9092/api/docdb/v1/USER/doc/Prueba/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9092",
+					"path": [
+						"api",
+						"docdb",
+						"v1",
+						"USER",
+						"doc",
+						"Prueba",
+						"1"
+					]
+				},
+				"description": "Gets Document 1 of Database Person"
+			},
+			"response": []
+		},
+		{
+			"name": "Find all Documents of Person Database",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:9092/api/docdb/v1/USER/find/Prueba?",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9092",
+					"path": [
+						"api",
+						"docdb",
+						"v1",
+						"USER",
+						"find",
+						"Prueba"
+					],
+					"query": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"disabled": true
+						}
+					]
+				},
+				"description": "Gets All Documents"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Document 1 of Person Database",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "superuser",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Nombre\":\"Nancy\",\n\t\"Apellido\":\"Pérez\",\n\t\"Dirección\": {\n\t\t\"Calle\":\"Principal\",\n\t\t\"Número\":\"1\",\n\t\t\"Ciudad\":\"Madrid\",\n\t\t\"Provincia\":\"Madrid\",\n\t\t\"País\":\"España\"\n\t},\n\t\"email\": \"juan.perez@intersystems.com\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9092/api/docdb/v1/USER/doc/Prueba/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9092",
+					"path": [
+						"api",
+						"docdb",
+						"v1",
+						"USER",
+						"doc",
+						"Prueba",
+						"1"
+					]
+				},
+				"description": "Update Document 1"
+			},
+			"response": []
+		},
+		{
+			"name": "Remove Document 1 of Person Database",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "SYS",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "superuser",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:57774/api/docdb/v1/DEMO/doc/Person/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "57774",
+					"path": [
+						"api",
+						"docdb",
+						"v1",
+						"DEMO",
+						"doc",
+						"Person",
+						"1"
+					]
+				},
+				"description": "Delete Document 1"
+			},
+			"response": []
+		},
+		{
+			"name": "Remove Person Database",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "superuser",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9092/api/docdb/v1/USER",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9092",
+					"path": [
+						"api",
+						"docdb",
+						"v1",
+						"USER"
+					]
+				},
+				"description": "Delete Person Database"
+			},
+			"response": []
+		},
+		{
+			"name": "Remove Property",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "superuser",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9092/api/docdb/v1/USER/prop/Prueba/nombre",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9092",
+					"path": [
+						"api",
+						"docdb",
+						"v1",
+						"USER",
+						"prop",
+						"Prueba",
+						"nombre"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find by Property",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "superuser",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"restriction\": [\n        \"nombre\",\n        \"A\",\n        \"%STARTSWITH\"\n    ],\n    \"projection\": [\n        \"%DocumentId\",\n        \"nombre\"\n    ]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9092/api/docdb/v1/USER/find/Prueba",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9092",
+					"path": [
+						"api",
+						"docdb",
+						"v1",
+						"USER",
+						"find",
+						"Prueba"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "1234",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "superuser",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "c5b848d7-5e9f-43df-b85a-979e416299da",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "6fe4348d-e7ca-44fb-98d6-d1e2841d8dec",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
