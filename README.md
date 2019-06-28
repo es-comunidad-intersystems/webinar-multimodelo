@@ -8,44 +8,19 @@ El proyecto está dividido en varios ejemplos:
 
 En este ejemplo se utiliza un simple proyecto springboot con maven que utiliza el conector Java JDBC de InterSystems IRIS para conectarse a una instancia de IRIS Community Edition que se levanta en un contenedor Docker.
 
-El controlador JDBC reside en un directorio de la instancia de IRIS y se debe traer al equipo local:
-
-```bash
-root@localhost:/# df
-Filesystem     1K-blocks      Used Available Use% Mounted on
-overlay         61255492  35660284  22453884  62% /
-tmpfs              65536         0     65536   0% /dev
-tmpfs            2534072         0   2534072   0% /sys/fs/cgroup
-osxfs          976900220 846849764 117767420  88% /shared
-/dev/sda1       61255492  35660284  22453884  62% /etc/hosts
-shm                65536       664     64872   2% /dev/shm
-tmpfs            2534072         0   2534072   0% /proc/acpi
-tmpfs            2534072         0   2534072   0% /sys/firmware
-
-root@localhost:/shared# iris list
-
-Configuration 'IRIS'   (default)
-        directory:    /usr/irissys
-        versionid:    2019.2.0.107.0com
-        datadir:      /usr/irissys
-        conf file:    iris.cpf  (SuperServer port = 51773, WebServer = 52773)
-        status:       running, since Mon Jun 17 18:15:15 2019
-        state:        ok
-        product:      InterSystems IRIS
-
-root@localhost:/shared# cp /usr/irissys/dev/java/lib/JDK18/intersystems-jdbc-3.0.0.jar /shared/
-```
-
-Posteriormente se debe registrar la librería para que pueda ser referenciada por Maven:
-
-```bash
-mv intersystems-jdbc-3.0.0.jar ../drivers
-mvn install:install-file -Dfile="drivers/intersystems-jdbc-3.0.0.jar" -DgroupId="com.intersystems.jdbc" -DartifactId="IRISDriver" -Dversion="3.0.0" -Dpackaging=jar
-```
+Más detalle en el [README](https://github.com/es-comunidad-intersystems/webinar-multimodelo/tree/master/jdbc-springboot-maven) del proyecto
 
 ## jdbc-jpa-rest
 
-En este ejemplo se utiliza igualmente Spring Boot y Maven. En este caso se utiliza Hybernate JPA para vincular las tablas a entidades
+En este ejemplo se utiliza igualmente Spring Boot y Maven. En este caso se utiliza Hybernate JPA para vincular las tablas a entidades. Se genera una API REST que puede ser utilizada por cualquier aplicación.
+
+Más detalle en el [README](https://github.com/es-comunidad-intersystems/webinar-multimodelo/tree/master/jdbc-jpa-rest) del proyecto
+
+## webminar-web
+
+Aplicación Angular de ejemplo que utiliza la API desarrollada en el ejemplo anterior
+
+Más detalle en el [README](https://github.com/es-comunidad-intersystems/webinar-multimodelo/tree/master/webminar-web) del proyecto
 
 ## node-express-rest
 
@@ -53,4 +28,12 @@ En este ejmplo utilizamos node.js y accedemos directamente a los Globals de Inte
 
 Más detalle en el [README](https://github.com/es-comunidad-intersystems/webinar-multimodelo/tree/master/node-express-rest) del proyecto
 
-## webminar-web
+## iris-phoneapp
+
+Este ejemplo tiene dos proyectos.
+
+El primer proyecto es una API completamente desarrollada en IRIS mediante ObjectScript. En este ejemplo se utilizan las carácteristicas de IRIS para el uso como Base de Datos Orientada a Objetos. Se utiliza la persistencia de objetos nativa de IRIS y además se proporciona una API REST para manipular los objetos de la base de datos.
+
+El segundo proyecto es una simple aplicación desarrollada en Angular 7 que hace uso de la API publicada en IRIS.
+
+Más detalle en el [README de la api](https://github.com/es-comunidad-intersystems/webinar-multimodelo/tree/master/iris-phoneapp/api) y en el [README de la app](https://github.com/es-comunidad-intersystems/webinar-multimodelo/tree/master/iris-phoneapp/app)
