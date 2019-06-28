@@ -51,6 +51,6 @@ En este ejemplo se utiliza igualmente Spring Boot y Maven. En este caso se utili
 
 En este ejmplo utilizamos node.js y accedemos directamente a los Globals de InterSystems IRIS para establecer, recuperar y eliminar datos almacenados. Construimos una API REST que es capaz de recibir GET, POST y DELETE de un objeto JSON personalizado y estructurar sus propiedades en Globals de InterSystems IRIS.
 
-Más detalle en el README del proyecto
+Más detalle en el [README](https://github.com/es-comunidad-intersystems/webinar-multimodelo/tree/master/node-express-rest) del proyecto
 
 ## webminar-web
