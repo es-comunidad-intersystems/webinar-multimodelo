@@ -1,4 +1,4 @@
-## jdbc-springboot-maven
+# jdbc-springboot-maven
 
 En este ejemplo se utiliza un simple proyecto SpringBoot con Maven que utiliza el conector Java JDBC de InterSystems IRIS para conectarse a una instancia de IRIS Community Edition que se levanta en un contenedor Docker.
 

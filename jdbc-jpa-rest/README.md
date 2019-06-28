@@ -1,4 +1,4 @@
-## jdbc-jpa-rest
+# jdbc-jpa-rest
 
 En este ejemplo se utiliza un proyecto SpringBoot con Maven que utiliza el conector Java JDBC de InterSystems IRIS para conectarse a una instancia de IRIS Community Edition que se levanta en un contenedor Docker. A su vez esta aplicación publicará 3 servicios REST publicos a los que podremos acceder una vez desplegada la aplicación.
 
