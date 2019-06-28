@@ -1,0 +1,12 @@
+<div class="container-fluid">
+    <div class="container">
+        <div class="card" *ngFor="let phone of phones" style="border:0">
+            <div>
+                <img src="{{ 'assets/'+phone.img || 'assets/img/test-greenphone.png' }}">
+                <h2 class="model">{{ phone.model }}</h2>
+                <p class="manufacturer">{{ phone.manufacturer }}</p>
+                <p class="price">{{ phone.price }}</p>
+            </div>
+        </div>
+    </div>
+</div>

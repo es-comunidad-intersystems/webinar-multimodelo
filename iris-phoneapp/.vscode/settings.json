@@ -1,0 +1,6 @@
+{
+    "objectscript.conn.port": 9092,
+    "objectscript.conn.username": "superuser",
+    "objectscript.conn.password": "1234",
+    "objectscript.conn.active": true
+}
