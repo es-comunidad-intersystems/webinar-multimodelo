@@ -3,7 +3,7 @@ services:
   iris:
     hostname: localhost
     image: store/intersystems/iris:2019.2.0.107.0-community
-    container_name: iris_webminar
+    container_name: iris_webinar
     volumes:
       - ${PWD}/shared/:/shared
     ports:
