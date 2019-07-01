@@ -1,19 +1,19 @@
 {
 	"info": {
 		"_postman_id": "d480404e-ee77-45e6-8941-737307c60b5d",
-		"name": "IRIS DocDB Demo",
+		"name": "IRIS DocDB USER",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
-			"name": "Get All Databases",
+			"name": "Recuperar todas las Database",
 			"request": {
 				"auth": {
 					"type": "basic",
 					"basic": [
 						{
 							"key": "password",
-							"value": "SYS",
+							"value": "1234",
 							"type": "string"
 						},
 						{
@@ -26,32 +26,32 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:57774/api/docdb/v1/DEMO",
+					"raw": "http://localhost:9092/api/docdb/v1/USER",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "57774",
+					"port": "9092",
 					"path": [
 						"api",
 						"docdb",
 						"v1",
-						"DEMO"
+						"USER"
 					]
 				},
-				"description": "Gets All Databases"
+				"description": "Recuperar todas las Databases"
 			},
 			"response": []
 		},
 		{
-			"name": "Create Person Database",
+			"name": "Crear Database",
 			"request": {
 				"auth": {
 					"type": "basic",
 					"basic": [
 						{
 							"key": "password",
-							"value": "SYS",
+							"value": "1234",
 							"type": "string"
 						},
 						{
@@ -64,34 +64,34 @@
 				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:57774/api/docdb/v1/DEMO/db/Person",
+					"raw": "http://localhost:9092/api/docdb/v1/USER/db/Personas",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "57774",
+					"port": "9092",
 					"path": [
 						"api",
 						"docdb",
 						"v1",
-						"DEMO",
+						"USER",
 						"db",
-						"Person"
+						"Personas"
 					]
 				},
-				"description": "Create Person Document Database"
+				"description": "Crear Database"
 			},
 			"response": []
 		},
 		{
-			"name": "Details of Person Database",
+			"name": "Recuperar detalles de Database",
 			"request": {
 				"auth": {
 					"type": "basic",
 					"basic": [
 						{
 							"key": "password",
-							"value": "SYS",
+							"value": "1234",
 							"type": "string"
 						},
 						{
@@ -104,27 +104,27 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:57774/api/docdb/v1/DEMO/db/Person",
+					"raw": "http://localhost:9092/api/docdb/v1/USER/db/Personas",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "57774",
+					"port": "9092",
 					"path": [
 						"api",
 						"docdb",
 						"v1",
-						"DEMO",
+						"USER",
 						"db",
-						"Person"
+						"Personas"
 					]
 				},
-				"description": "Get Person Document Database"
+				"description": "Recuperar detalles de Database"
 			},
 			"response": []
 		},
 		{
-			"name": "Create Properties",
+			"name": "Crear Propiedad de Busqueda",
 			"request": {
 				"auth": {
 					"type": "basic",
@@ -159,7 +159,7 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "http://localhost:9092/api/docdb/v1/USER/prop/Prueba/nombre?type=%String&path=Nombre&unique=0",
+					"raw": "http://localhost:9092/api/docdb/v1/USER/prop/Personas/nombre?type=%String&path=Nombre&unique=0",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -171,7 +171,7 @@
 						"v1",
 						"USER",
 						"prop",
-						"Prueba",
+						"Personas",
 						"nombre"
 					],
 					"query": [
@@ -198,7 +198,7 @@
 			"response": []
 		},
 		{
-			"name": "Add new Document to Person Database",
+			"name": "Guardar nuevo documento en Personas",
 			"request": {
 				"auth": {
 					"type": "basic",
@@ -231,7 +231,7 @@
 					"raw": "{\n\t\"Nombre\":\"Alberto\",\n\t\"Apellido\":\"Pérez\",\n\t\"Dirección\": {\n\t\t\"Calle\":\"Principal\",\n\t\t\"Número\":\"1\",\n\t\t\"Ciudad\":\"Madrid\",\n\t\t\"Provincia\":\"Madrid\",\n\t\t\"País\":\"España\"\n\t}\n}"
 				},
 				"url": {
-					"raw": "http://localhost:9092/api/docdb/v1/USER/doc/Prueba/",
+					"raw": "http://localhost:9092/api/docdb/v1/USER/doc/Personas/",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -243,16 +243,16 @@
 						"v1",
 						"USER",
 						"doc",
-						"Prueba",
+						"Personas",
 						""
 					]
 				},
-				"description": "Create New Person Document"
+				"description": "Guardar nuevo documento en Personas"
 			},
 			"response": []
 		},
 		{
-			"name": "Retrieve Document 1 of Person Database",
+			"name": "Recuperar Documento de Personas por ID",
 			"request": {
 				"auth": {
 					"type": "basic",
@@ -278,7 +278,7 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:9092/api/docdb/v1/USER/doc/Prueba/1",
+					"raw": "http://localhost:9092/api/docdb/v1/USER/doc/Personas/1",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -290,16 +290,16 @@
 						"v1",
 						"USER",
 						"doc",
-						"Prueba",
+						"Personas",
 						"1"
 					]
 				},
-				"description": "Gets Document 1 of Database Person"
+				"description": "Recuperar Documento de Personas por ID"
 			},
 			"response": []
 		},
 		{
-			"name": "Find all Documents of Person Database",
+			"name": "Buscar todos los documentos de Personas",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -314,7 +314,7 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "http://localhost:9092/api/docdb/v1/USER/find/Prueba?",
+					"raw": "http://localhost:9092/api/docdb/v1/USER/find/Personas",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -326,22 +326,15 @@
 						"v1",
 						"USER",
 						"find",
-						"Prueba"
-					],
-					"query": [
-						{
-							"key": "Content-Type",
-							"value": "application/json",
-							"disabled": true
-						}
+						"Personas"
 					]
 				},
-				"description": "Gets All Documents"
+				"description": "Buscar todos los documentos de Personas"
 			},
 			"response": []
 		},
 		{
-			"name": "Update Document 1 of Person Database",
+			"name": "Actualizar Documento",
 			"request": {
 				"auth": {
 					"type": "basic",
@@ -374,7 +367,7 @@
 					"raw": "{\n\t\"Nombre\":\"Nancy\",\n\t\"Apellido\":\"Pérez\",\n\t\"Dirección\": {\n\t\t\"Calle\":\"Principal\",\n\t\t\"Número\":\"1\",\n\t\t\"Ciudad\":\"Madrid\",\n\t\t\"Provincia\":\"Madrid\",\n\t\t\"País\":\"España\"\n\t},\n\t\"email\": \"juan.perez@intersystems.com\"\n}"
 				},
 				"url": {
-					"raw": "http://localhost:9092/api/docdb/v1/USER/doc/Prueba/1",
+					"raw": "http://localhost:9092/api/docdb/v1/USER/doc/Personas/1",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -386,23 +379,23 @@
 						"v1",
 						"USER",
 						"doc",
-						"Prueba",
+						"Personas",
 						"1"
 					]
 				},
-				"description": "Update Document 1"
+				"description": "Actualizar Documento"
 			},
 			"response": []
 		},
 		{
-			"name": "Remove Document 1 of Person Database",
+			"name": "Eliminar Documento",
 			"request": {
 				"auth": {
 					"type": "basic",
 					"basic": [
 						{
 							"key": "password",
-							"value": "SYS",
+							"value": "1234",
 							"type": "string"
 						},
 						{
@@ -428,28 +421,28 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "http://localhost:57774/api/docdb/v1/DEMO/doc/Person/1",
+					"raw": "http://localhost:9092/api/docdb/v1/USER/doc/Personas/1",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "57774",
+					"port": "9092",
 					"path": [
 						"api",
 						"docdb",
 						"v1",
-						"DEMO",
+						"USER",
 						"doc",
-						"Person",
+						"Personas",
 						"1"
 					]
 				},
-				"description": "Delete Document 1"
+				"description": "Eliminar Documento"
 			},
 			"response": []
 		},
 		{
-			"name": "Remove Person Database",
+			"name": "Eliminar Database Personas",
 			"request": {
 				"auth": {
 					"type": "basic",
@@ -480,7 +473,7 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:9092/api/docdb/v1/USER",
+					"raw": "http://localhost:9092/api/docdb/v1/USER/db/Personas",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -490,15 +483,17 @@
 						"api",
 						"docdb",
 						"v1",
-						"USER"
+						"USER",
+						"db",
+						"Personas"
 					]
 				},
-				"description": "Delete Person Database"
+				"description": "Borrar Database Personas"
 			},
 			"response": []
 		},
 		{
-			"name": "Remove Property",
+			"name": "Elimianr Propiedad",
 			"request": {
 				"auth": {
 					"type": "basic",
@@ -518,7 +513,7 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:9092/api/docdb/v1/USER/prop/Prueba/nombre",
+					"raw": "http://localhost:9092/api/docdb/v1/USER/prop/Personas/nombre",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -530,7 +525,7 @@
 						"v1",
 						"USER",
 						"prop",
-						"Prueba",
+						"Personas",
 						"nombre"
 					]
 				}
@@ -538,7 +533,7 @@
 			"response": []
 		},
 		{
-			"name": "Find by Property",
+			"name": "Buscar por Propiedad de Busqueda",
 			"request": {
 				"auth": {
 					"type": "basic",
@@ -573,7 +568,7 @@
 					"raw": "{\n    \"restriction\": [\n        \"nombre\",\n        \"A\",\n        \"%STARTSWITH\"\n    ],\n    \"projection\": [\n        \"%DocumentId\",\n        \"nombre\"\n    ]\n}"
 				},
 				"url": {
-					"raw": "http://localhost:9092/api/docdb/v1/USER/find/Prueba",
+					"raw": "http://localhost:9092/api/docdb/v1/USER/find/Personas",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -585,7 +580,7 @@
 						"v1",
 						"USER",
 						"find",
-						"Prueba"
+						"Personas"
 					]
 				}
 			},
