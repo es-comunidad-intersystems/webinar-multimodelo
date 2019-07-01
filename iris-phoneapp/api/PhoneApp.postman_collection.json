@@ -1,0 +1,138 @@
+{
+	"info": {
+		"_postman_id": "74a509bf-c151-4358-92f7-ee18cc57b69a",
+		"name": "PhoneApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Obtener telefonos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9092/phoneapp/api/phones",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9092",
+					"path": [
+						"phoneapp",
+						"api",
+						"phones"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recuperar telefono por id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9092/phoneapp/api/phones/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9092",
+					"path": [
+						"phoneapp",
+						"api",
+						"phones",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modificar telefono",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"1\",\n    \"manufacturer\": \"Motorola\",\n    \"model\": \"Moto X Play\",\n    \"resolution\": \"1920x1080\",\n    \"cpu\": \"Qualcomm Snapdragon 615 64-Bit\",\n    \"cputype\": \"Octa-Core\",\n    \"ram\": \"2 GByte\",\n    \"battery\": \"3.630mAh\",\n    \"dimensions\": \"148 x 75 x 10.9 mm\",\n    \"os\": \"Android Version: 5.1.1 Lollipop\",\n    \"released\": \"08/2015\",\n    \"img\": \"img/motorola_moto_x_play.jpg\",\n    \"price\": \"19.00\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9092/phoneapp/api/phones/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9092",
+					"path": [
+						"phoneapp",
+						"api",
+						"phones",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Insertar telefono",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"manufacturer\": \"Bellota\",\n    \"model\": \"De Roble\",\n    \"resolution\": \"1920x1080\",\n    \"cpu\": \"64-Bit\",\n    \"cputype\": \"1-Core\",\n    \"ram\": \"2 GByte\",\n    \"battery\": \"3.630mAh\",\n    \"dimensions\": \"148 x 75 x 10.9 mm\",\n    \"os\": \"Android Version: 5.1.1 Lollipop\",\n    \"released\": \"08/2019\",\n    \"img\": \"img/test-bluephone.png\",\n    \"price\": \"19.00\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9092/phoneapp/api/phones/new",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9092",
+					"path": [
+						"phoneapp",
+						"api",
+						"phones",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Borrar telefono",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9092/phoneapp/api/phones/17",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9092",
+					"path": [
+						"phoneapp",
+						"api",
+						"phones",
+						"17"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
