@@ -26,6 +26,8 @@ Más detalle en el [README](https://github.com/es-comunidad-intersystems/webinar
 
 En este ejemplo se presentan las capacidades de Base de Datos documental de IRIS. Para hacerlo de forma simple mostraremos un ejemplo de Uso mediante la API REST incorporada.
 
+Más detalle en el [README](https://github.com/es-comunidad-intersystems/webinar-multimodelo/tree/master/rest-docdb) del proyecto
+
 ## node-express-rest
 
 En este ejmplo utilizamos node.js y accedemos directamente a los Globals de InterSystems IRIS para establecer, recuperar y eliminar datos almacenados. Construimos una API REST que es capaz de recibir GET, POST y DELETE de un objeto JSON personalizado y estructurar sus propiedades en Globals de InterSystems IRIS.
